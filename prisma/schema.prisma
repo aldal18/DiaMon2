@@ -25,7 +25,7 @@ model User {
 model MonitorData {
   id        String   @id @default(cuid())
   value     Float
-  datetime  DateTime
+  datetime  DateTime  @default(now())
   user      User     @relation(fields:[userId], references:[id])
   userId    String
 }

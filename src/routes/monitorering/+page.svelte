@@ -11,7 +11,7 @@
     </div>
 
     <div class="button-container">
-        <button class="button" onclick="hentData()">Hent Data</button>
+        <button class="button" on:click={dataGet}>Hent Data</button>
         <button on:click={refreshGraph}>Genindlæs side</button>
     </div>
 </div>
@@ -19,5 +19,9 @@
 <script>
     function refreshGraph() {
         location.reload()
+    }
+    function dataGet() {
+        const response = fetch("api/monitordata", {method:"GET"})
+        alert(response)
     }
 </script>
