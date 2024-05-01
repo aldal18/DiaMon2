@@ -8,7 +8,7 @@ export async function handle({ event, resolve }) {
     console.log(event.url.pathname);
     console.log(event.cookies.get('token'));
 
-    if (['/', '/api/login', '/login', '/signup'].includes(pathname)) {
+    if (['/', '/api/login', '/login', '/signup', '/api/user'].includes(pathname)) {
 		return await resolve(event);
 	} else {
 		if (!cookies.get('token')) {
