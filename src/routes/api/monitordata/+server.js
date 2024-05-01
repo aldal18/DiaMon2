@@ -24,3 +24,4 @@ export async function GET({ request, cookies }) {
     console.log(res);
     return res
 }
+//weeeee
