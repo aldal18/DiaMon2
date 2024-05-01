@@ -18,7 +18,7 @@ export async function POST({ request, cookies }) {
 	const match = bcrypt.compareSync(password, user.hashPass);
 	if (match) {
 		const token = jwt.sign({ id: user.userId, email: user.email }, env.JWT_SECRET);
-		cookies.set('token', token, { httpOnly: true, path: '/' }); // cookies
+		cookies.set('token', token, { httpOnly: true, path: '/login' }); 
 		return new Response('Logged in', { status: 200 });
 	} else {
 		return new Response('Unauthorized', { status: 401 });
