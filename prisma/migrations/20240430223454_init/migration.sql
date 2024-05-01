@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "MonitorData" ALTER COLUMN "datetime" SET DEFAULT CURRENT_TIMESTAMP;
