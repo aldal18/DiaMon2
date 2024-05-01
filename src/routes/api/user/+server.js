@@ -3,7 +3,7 @@ import bcrypt from 'bcryptjs';
 
 export async function POST({ request, cookies }) {
 	const body = await request.json();
-    const dough = await cookies.json();
+   // const dough = await cookies.json();
 	const prisma = new PrismaClient();
 	const hash = await bcrypt.hashSync(body.pass);
 	try {
@@ -12,7 +12,7 @@ export async function POST({ request, cookies }) {
 				email: body.email,
 				name: body.name,
 				hashPass: hash,
-                userId: dough.userId
+                
 
 			}
 		});
