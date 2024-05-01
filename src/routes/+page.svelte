@@ -1,2 +1,7 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>Velkommen til Sukkersyg Appen</h1>
+
+<p>Tryk her for at loggeind</p>
+<button on:click={() => window.location = '/login'}>Login</button>
+
+<p>Hvis du ikke har en bruger, Tryk her  for at oprette en ny bruger</p>
+<button on:click={() => window.location = '/signup'}>Sign Up</button>

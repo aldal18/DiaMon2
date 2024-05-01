@@ -13,6 +13,7 @@ export async function POST({ request, cookies }) {
     return new Response('Created', { status: 201 });
 }
 
+// eslint-disable-next-line no-unused-vars
 export async function GET({ request, cookies }) {
     const dough = await cookies.json();
     const prisma = new PrismaClient();
