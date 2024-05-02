@@ -25,6 +25,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@prisma/client": "^5.13.0"
+		"@prisma/client": "^5.13.0",
+		"@sveltestrap/sveltestrap": "^6.2.7",
+		"bcryptjs": "^2.4.3",
+		"jsonwebtoken": "^9.0.2"
 	}
 }
