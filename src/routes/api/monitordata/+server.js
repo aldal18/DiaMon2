@@ -1,12 +1,12 @@
 import { PrismaClient } from '@prisma/client'
 export async function POST({ request, cookies }) {
     const body = await request.json();
-    const dough = await cookies.json();
+    const userId = await cookies.get('userId');
     const prisma = new PrismaClient();
     const res = await prisma.monitorData.create({
         data: {
             value: body.value,
-            userId: dough.userId
+            userId: userId
         }
     });
     console.log(res);
@@ -14,13 +14,13 @@ export async function POST({ request, cookies }) {
 }
 
 export async function GET({ request, cookies }) {
-    const dough = await cookies.json();
+    const userId = await cookies.get('userId');
     const prisma = new PrismaClient();
     const res = await prisma.monitorData.findMany({
         where: {
-            userId: dough.userId
+            userId: userId
         }
     });
     console.log(res);
-    return res
+    return new Response ('Data hentet', res, { status: 201});
 }
