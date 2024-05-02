@@ -3,13 +3,17 @@ export async function POST({ request, cookies }) {
     const body = await request.json();
     const userId = await cookies.get('userId');
     const prisma = new PrismaClient();
+    const user = await prisma.user.findFirst({
+        where: {
+        id : userId
+        }
+    })
     const res = await prisma.monitorData.create({
         data: {
-            value: body.value,
-            userId: userId
+            value: parseFloat(body.value),
+            userId: userId,
         }
     });
-    console.log(res);
     return new Response('Created', { status: 201 });
 }
 
@@ -22,5 +26,5 @@ export async function GET({ request, cookies }) {
         }
     });
     console.log(res);
-    return new Response ('Data hentet', res, { status: 201});
+    return new Response (JSON.stringify(res), { status: 201});
 }

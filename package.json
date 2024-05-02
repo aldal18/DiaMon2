@@ -28,6 +28,8 @@
 		"@prisma/client": "^5.13.0",
 		"@sveltestrap/sveltestrap": "^6.2.7",
 		"bcryptjs": "^2.4.3",
-		"jsonwebtoken": "^9.0.2"
+		"jsonwebtoken": "^9.0.2",
+		"plotly": "^1.0.6",
+		"plotly.js": "^2.32.0"
 	}
 }

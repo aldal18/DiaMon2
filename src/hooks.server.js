@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken';
 export async function handle({ event, resolve }) {
     const path = event.url.pathname;
     const cookie = event.cookies.get('token');
-    if (['/', '/login', '/api/login'].includes(path)) {
+    if (['/', '/login', '/api/login', '/register', '/api/user'].includes(path)) {
         return await resolve(event);
     } else {
         if (cookie) {
