@@ -14,3 +14,4 @@ export async function POST({ request, cookies }) {
     console.log(res);
     return new Response('Bruger oprettet', { status: 201 });
 }
+
