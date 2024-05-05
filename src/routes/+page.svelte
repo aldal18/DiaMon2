@@ -32,6 +32,14 @@
             color: #000000; /* Black text color */
             font-family: "Roboto", sans-serif; /* Professional font */
         }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: #000000; /* Black text color */
+            font-family: "Roboto", sans-serif; /* Professional font */
+        }
         .hero .lead {
             font-size: 1.5rem;
             margin-bottom: 3rem;
@@ -122,7 +130,8 @@
 <body>
 
 <div class="hero">
-    <h1>Din vej til velvære</h1>
+    <h1>DiaMon2</h1>
+    <h2>Din vej til velvære</h2>
     <p class="lead">Uanset hvor du er på din sundhedsrejse, har vi de ressourcer og værktøjer, du har brug for til at leve og trives med diabetes.</p>
     <div class="d-flex justify-content-center">
         <button class="btn btn-primary btn-lg me-2">
